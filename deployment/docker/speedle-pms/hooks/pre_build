@@ -3,7 +3,6 @@
 pushd ../../..
 mkdir _output
 docker run --rm -v "$PWD":/go/src/github.com/oracle/speedle -v "$PWD/_output":/go/bin golang:${goVersion} make -C /go/src/github.com/oracle/speedle build
+cp _output/speedle-pms ./deployment/docker/speedle-pms
 popd
-
-cp _output/speedle-pms .
 
