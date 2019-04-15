@@ -1,0 +1,9 @@
+#!/bin/bash -x
+
+pushd ../../..
+mkdir _output
+docker run --rm -v "$PWD":/go/src/github.com/oracle/speedle -v "$PWD/_output":/go/bin golang:${goVersion} make build
+popd
+
+cp _output/speedle-pms .
+
