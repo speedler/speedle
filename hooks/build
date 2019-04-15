@@ -1,8 +1,0 @@
-#!/bin/bash
-
-echo "**** hooks/build is running."
-
-docker version
-pwd
-
-
